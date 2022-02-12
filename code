@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+//funcion para contar los caracteres de una cadena alfabetica
+int main()
+{
+    char cadena[15]="hola mundo";
+    int i=0;
+    int letras=0;
+    printf("La cadena es: %s\n",cadena);
+    while (cadena[i]!='\0')
+        {
+            if (((cadena[i]>'a')|| (cadena[i]<'z')) && (cadena[i]!=' '))
+                letras++;
+                printf("%i: %c\n",i,cadena[i]);
+            i++;        
+        }
+    printf("\nCantidad de caracteres (sin contar espacios): %i\n",letras);
+    printf("\nCantidad de posicion (cuenta desde 0): %i\n",i);
+    printf("\nLa funcion strlen dice que la cadena tiene: %li caracteres (cuenta los espacios)\n",strlen(cadena));
+    printf("\nEl espacio reservado inicial es de %li\n",sizeof(cadena));
+}
